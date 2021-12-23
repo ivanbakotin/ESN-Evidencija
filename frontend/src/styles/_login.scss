@@ -1,0 +1,108 @@
+main {
+    display: flex;
+    min-height: 100vh;    
+    background: linear-gradient(to right top, #c8d8e4, #52ab98);
+    justify-content: space-around;
+    align-items: center;
+    
+    @media (max-width: 726px) {
+      flex-direction: column;
+    }
+
+    .submit {
+        margin: 3rem;
+        padding: 0.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        border-radius: 1rem;
+        border: none;
+        background: #4B5C77;
+        color: white;
+
+        :hover {
+            background: #525255;
+        }
+    }
+
+    p { 
+        font-size: 2.5rem;
+        color: red;
+    }
+
+    .baloon-right {
+        border-radius: 50%;
+        background: linear-gradient(to right top, #c8d8e4, #52ab98);
+        height: 15rem;
+        width: 15rem;
+        position: absolute;
+        top: 25%;
+        right: 25%;
+    }
+
+    .baloon-left {
+        border-radius: 50%;
+        background: linear-gradient(to right top, #c8d8e4, #52ab98);
+        height: 15rem;
+        width: 15rem;
+        position: absolute;
+        bottom: 25%;
+        left: 25%;
+    }
+
+    img {
+        object-fit: contain;
+        height: 15rem;
+        width: 30rem;
+        z-index: 1;
+    }
+
+    form {
+        z-index: 1;
+        margin: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 5rem;
+
+        h1 {
+            text-align: center;
+            width: 80%;
+            margin-bottom: 2rem;
+            border-bottom: solid 0.4rem #4B5C77;
+        }
+    
+        div {
+            position: relative;
+            margin: 1.5rem;
+            font-size: 5rem;
+            overflow-x: visible;    
+        }
+
+        input {
+            appearance: none;
+            border: none;
+            border-bottom: 0.1rem solid #000;
+            outline: none;
+            transition: 300ms;
+        
+            :focus {
+              border-bottom-color:#3498db;
+            }
+        }
+    
+
+        label {
+            color: #000;
+            position: absolute;
+            left: 2%;
+            bottom: 10%;
+            transition: 300ms;
+        }
+
+        .label-active {
+            font-size: 2rem; 
+            top: -1rem;
+        }
+    }
+}

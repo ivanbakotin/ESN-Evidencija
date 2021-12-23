@@ -1,0 +1,31 @@
+table {
+    font-size: 4rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    border-collapse: collapse;
+
+    tr {
+        font-size: 4rem;
+        margin: 1rem;
+        border: 0.1rem black solid;
+        text-align: center;
+
+        th {
+            padding: 1rem;
+            border: 0.1rem black solid;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        td {
+            border: 0.1rem black solid;
+
+            a {
+                font-size: 2rem;
+                color: black
+            }
+        }
+    }
+}
