@@ -11,13 +11,13 @@ const TableAttendance = (props) => {
     const [ sortedName, setSortedName ] = useState(false)
     const [ sortedEver, setSortedEver ] = useState(false)
     const [ sortedNow, setSortedNow ] = useState(false)
-
+    console.log(userlist)
     useEffect(() => {
         if (userlist) {
             if (props.location.state) {
-                setUsers(userlist.filter(user => user.tim == "Presco"))
+                setUsers(userlist.filter(user => user.tim == "Presco" || user.razina == "Koordinator"))
             } else {
-                setUsers(userlist.filter(user => user.tim != "Presco"))
+                setUsers(userlist.filter(user => user.tim != "Presco" && user.razina != "Koordinator"))
             }
         }
     }, [userlist, props])
