@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from "react"
 import { UserlistContext } from "../../context/Context";
 import { Link } from "react-router-dom";
 
-const TableAttendance = () => {
+const TableAttendance = (props) => {
 
     const { userlist } = useContext(UserlistContext);
 
@@ -13,8 +13,14 @@ const TableAttendance = () => {
     const [ sortedNow, setSortedNow ] = useState(false)
 
     useEffect(() => {
-        if (userlist) setUsers(userlist)
-    }, [userlist])
+        if (userlist) {
+            if (props.location.state) {
+                setUsers(userlist.filter(user => user.tim == "Presco"))
+            } else {
+                setUsers(userlist.filter(user => user.tim != "Presco"))
+            }
+        }
+    }, [userlist, props])
 
     function sortByName() {
         if (sortedName) {
@@ -58,7 +64,11 @@ const TableAttendance = () => {
             {users.map(user => { 
                 return (      
                     <tr key={user.id}>
-                        <td><Link to={{pathname:`/korisnik/${user.id}`}}>{user.ime} {user.prezime}</Link></td>
+                        <td>
+                            <Link to={{pathname:`/korisnik/${user.id}`}}>
+                                {user.ime} {user.prezime}
+                            </Link>
+                        </td>
                         <td>{user.now1}</td>
                         <td>{user.last2}</td>
                     </tr> 

@@ -32,7 +32,7 @@ const Login = () => {
 	}
 
   	return (
-    <main>
+    <main className="login-form">
 		<div className="baloon-right" />
 	    <div className="baloon-left" />
         <img src={esnlogo} />

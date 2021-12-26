@@ -1,4 +1,15 @@
-main {
+.logged-in-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,7 +24,7 @@ main {
 }
 
 @media (max-width: 726px) {
-  main {
+  .login-form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -21,7 +32,7 @@ main {
   }
 }
 
-main .submit {
+.login-form .submit {
   margin: 3rem;
   padding: 0.5rem;
   padding-left: 1.5rem;
@@ -32,16 +43,16 @@ main .submit {
   color: white;
 }
 
-main .submit :hover {
+.login-form .submit:hover {
   background: #525255;
 }
 
-main p {
+.login-form p {
   font-size: 2.5rem;
   color: red;
 }
 
-main .baloon-right {
+.login-form .baloon-right {
   border-radius: 50%;
   background: -webkit-gradient(linear, left bottom, right top, from(#c8d8e4), to(#52ab98));
   background: linear-gradient(to right top, #c8d8e4, #52ab98);
@@ -52,7 +63,7 @@ main .baloon-right {
   right: 25%;
 }
 
-main .baloon-left {
+.login-form .baloon-left {
   border-radius: 50%;
   background: -webkit-gradient(linear, left bottom, right top, from(#c8d8e4), to(#52ab98));
   background: linear-gradient(to right top, #c8d8e4, #52ab98);
@@ -63,7 +74,7 @@ main .baloon-left {
   left: 25%;
 }
 
-main img {
+.login-form img {
   -o-object-fit: contain;
      object-fit: contain;
   height: 15rem;
@@ -71,7 +82,7 @@ main img {
   z-index: 1;
 }
 
-main form {
+.login-form form {
   z-index: 1;
   margin: 2rem;
   display: -webkit-box;
@@ -90,21 +101,21 @@ main form {
   font-size: 5rem;
 }
 
-main form h1 {
+.login-form form h1 {
   text-align: center;
   width: 80%;
   margin-bottom: 2rem;
   border-bottom: solid 0.4rem #4B5C77;
 }
 
-main form div {
+.login-form form div {
   position: relative;
   margin: 1.5rem;
   font-size: 5rem;
   overflow-x: visible;
 }
 
-main form input {
+.login-form form input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -115,11 +126,11 @@ main form input {
   transition: 300ms;
 }
 
-main form input :focus {
+.login-form form input:focus {
   border-bottom-color: #3498db;
 }
 
-main form label {
+.login-form form label {
   color: #000;
   position: absolute;
   left: 2%;
@@ -128,7 +139,7 @@ main form label {
   transition: 300ms;
 }
 
-main form .label-active {
+.login-form form .label-active {
   font-size: 2rem;
   top: -1rem;
 }
@@ -200,7 +211,7 @@ table tr td a {
   background-color: #52ab98;
 }
 
-.wrapper .search :hover {
+.wrapper .search:hover {
   background-color: #529998;
 }
 
@@ -273,7 +284,7 @@ table tr td a {
   color: black;
 }
 
-.wrapper .list .one div .fas :hover {
+.wrapper .list .one div .fas:hover {
   color: gray;
 }
 

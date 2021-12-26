@@ -10,14 +10,7 @@ import React, { useEffect, useState } from "react"
 import { Route, Switch } from "react-router-dom";
 import { UserlistContext, EventlistContext } from "../../context/Context";
 import useFetchGet from "../../hooks/useFetchGet"
-import styled from "styled-components"
 import TableAttendance from "./TableAttendance"
-
-const Wrapper = styled.div`
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-`;
 
 const LoggedIn = () => {
 
@@ -34,23 +27,23 @@ const LoggedIn = () => {
   }, [fetchUsers])
 
   return (
-	    <Wrapper>
+	    <main className="logged-in-wrapper">
           <Navbar />
 		      <UserlistContext.Provider value={{userlist, setUserlist}}>
           <EventlistContext.Provider value={{eventlist, setEventlist}}>
               <Switch>
-              <Route exact path="/"><Svitimovi /></Route>
-              <Route path="/tim/:id" render={(props) => <TimDetalji {...props} />}/>
-              <Route path="/korisnik_obrazac/:type/:id?" render={(props) => <UserForm {...props} />}/>
-              <Route path="/event_obrazac/:type/:id?" render={(props) => <EventForm {...props} />}/>
-              <Route path="/korisnik/:id" render={(props) => <UserDetails {...props} />}/>
-              <Route path="/event/:id" render={(props) => <EventDetails {...props} />}/>
-              <Route path="/table" render={(props) => <TableAttendance {...props} />}/>
-              <Route><NotFound /></Route>
+                <Route exact path="/" ><Svitimovi /></Route>
+                <Route path="/tim/:id" ><TimDetalji /></Route>
+                <Route path="/korisnik_obrazac/:type/:id?"><UserForm /></Route>
+                <Route path="/event_obrazac/:type/:id?" ><EventForm /></Route>
+                <Route path="/korisnik/:id" ><UserDetails /></Route>
+                <Route path="/event/:id" ><EventDetails /></Route>
+                <Route path="/table" render={(props) => <TableAttendance {...props} />}/>
+                <Route><NotFound /></Route>
               </Switch>
           </EventlistContext.Provider>
 		      </UserlistContext.Provider>
-      </Wrapper>
+      </main>
   );
 };
 

@@ -13,7 +13,7 @@
         color: white;
         background-color: #52ab98;
     
-        :hover {
+        &:hover {
             background-color: #529998;
         }
     }
@@ -66,7 +66,7 @@
                     margin-inline: 1.5rem;
                     color: black;
                 
-                    :hover {
+                    &:hover {
                         color: gray;
                     }
                 }     

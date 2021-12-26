@@ -1,4 +1,4 @@
-main {
+.login-form {
     display: flex;
     min-height: 100vh;    
     background: linear-gradient(to right top, #c8d8e4, #52ab98);
@@ -19,7 +19,7 @@ main {
         background: #4B5C77;
         color: white;
 
-        :hover {
+        &:hover {
             background: #525255;
         }
     }
@@ -86,7 +86,7 @@ main {
             outline: none;
             transition: 300ms;
         
-            :focus {
+            &:focus {
               border-bottom-color:#3498db;
             }
         }

@@ -109,7 +109,8 @@ const Navbar = () => {
     return (
         <Navstyle>
             <Styledlink to="/">Timovi</Styledlink>
-            <Styledlink to="/table">Dolasci</Styledlink>
+            <Styledlink to={{pathname:`/table`, state: ""}}>Članovi</Styledlink>
+            <Styledlink to={{pathname:`/table`, state: "presco"}}>Presco</Styledlink>
             <Styledlink to="" onClick={Logout}>Odjava</Styledlink>
             
             <Burgerbar open={open} onClick={openBurger}>
@@ -119,7 +120,8 @@ const Navbar = () => {
             </Burgerbar>
             <StyledMenu open={open}>
                 <Link onClick={openBurger} to="/">Timovi</Link>
-                <Link onClick={openBurger} to="/table">Dolasci</Link>
+                <Link onClick={openBurger} to={{pathname:`/table`, state: ""}}>Članovi</Link>
+                <Link onClick={openBurger} to={{pathname:`/table`, state: "presco"}}>Presco</Link>
                 <Link onClick={openBurger} to="" onClick={Logout}>Odjava</Link>
             </StyledMenu>
         </Navstyle>
